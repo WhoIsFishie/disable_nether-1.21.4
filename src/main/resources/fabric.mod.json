@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "disable_nether",
+	"version": "${version}",
+	"name": "disable_nether",
+	"description": "disable nether portal and kill anyone who goes to the nether",
+	"authors": [
+		"Fishie"
+	],
+	"contact": {
+		"homepage": "https://t.me/fishieposting",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/disable_nether/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.fishie.no_nether.Disable_nether"
+		],
+		"fabric-datagen": [
+			"com.fishie.no_nether.Disable_netherDataGenerator"
+		]
+	},
+	"mixins": [
+		"disable_nether.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
